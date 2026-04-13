@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:2.4.0-runtime-slim-ubuntu22.04
+FROM pytorch/pytorch:2.4.0-runtime-ubuntu22.04
 
 WORKDIR /app
 
