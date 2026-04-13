@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
-const API = "http://localhost:8000";
+// const API = "http://localhost:8000";
+const API = "https://your-backend-on-render.com";   // ← Change this later
 
 /* ─── Types ───────────────────────────────────────────────────────────────── */
 interface Language {
