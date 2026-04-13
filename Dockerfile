@@ -10,11 +10,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-# Use the CPU-only PyTorch index to avoid pulling CUDA wheels (nvidia-*, triton)
+# Use PyPI as the primary index so all packages resolve correctly, with the
+# CPU-only PyTorch index as a secondary source so torch/torchvision/torchaudio
+# pull lightweight CPU wheels instead of CUDA builds (nvidia-*, triton, etc.)
 # which would bloat the image to 3 GB+ and cause push timeouts.
 RUN pip install --no-cache-dir \
-    --index-url https://download.pytorch.org/whl/cpu \
-    --extra-index-url https://pypi.org/simple \
+    --index-url https://pypi.org/simple \
+    --extra-index-url https://download.pytorch.org/whl/cpu \
     -r requirements.txt
 
 COPY . .
