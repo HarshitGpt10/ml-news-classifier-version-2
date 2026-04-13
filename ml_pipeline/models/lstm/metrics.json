@@ -1,0 +1,5 @@
+{
+  "model": "BiLSTM + Attention",
+  "test_accuracy": 0.8654,
+  "trained_at": "2026-04-08T18:36:51.581519"
+}

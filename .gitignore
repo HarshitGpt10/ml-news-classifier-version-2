@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# ML Models (large files — store in cloud/DVC)
+ml_pipeline/models/**/*.pt
+ml_pipeline/models/**/*.joblib
+ml_pipeline/models/**/*.pkl
+ml_pipeline/models/**/best_model/
+
+# Data (raw data should be re-downloadable)
+ml_pipeline/data/raw/
+
+# MLflow
+mlruns/
+
+# Secrets
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Coverage
+.coverage
+htmlcov/

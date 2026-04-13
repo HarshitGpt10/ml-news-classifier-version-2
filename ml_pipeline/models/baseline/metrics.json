@@ -1,0 +1,8 @@
+{
+  "model": "TF-IDF + Logistic Regression",
+  "val_accuracy": 0.8629,
+  "test_accuracy": 0.8607,
+  "test_f1": 0.8608,
+  "train_time_s": 84,
+  "trained_at": "2026-04-11T18:34:45.358979"
+}
