@@ -7,8 +7,10 @@ import os
 
 from ml_pipeline.services.translation_service import translate_to_english
 
-pytesseract.pytesseract.tesseract_cmd = r"N:\Projects\teseract\tesseract.exe"
-os.environ["TESSDATA_PREFIX"] = r"N:\Projects\teseract\tessdata"
+# On Linux (Docker) tesseract is on PATH; only override on Windows dev machines
+if os.name == "nt":
+    pytesseract.pytesseract.tesseract_cmd = r"N:\Projects\teseract\tesseract.exe"
+    os.environ["TESSDATA_PREFIX"] = r"N:\Projects\teseract\tessdata"
 
 OCR_CONFIG = {
     "en": {"engine": "easyocr", "langs": ['en']},

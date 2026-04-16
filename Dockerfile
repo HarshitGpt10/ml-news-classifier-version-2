@@ -4,9 +4,11 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
+    tesseract-ocr \
+    tesseract-ocr-hin \
+    tesseract-ocr-tam \
+    tesseract-ocr-ben \
+    tesseract-ocr-tel \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
