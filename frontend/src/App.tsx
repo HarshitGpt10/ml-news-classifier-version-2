@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 // const API = "http://localhost:8000";
-const API = "https://your-backend-on-render.com";   // ← Change this later
+const API = "https://heker123-ml-news-2048.hf.space";   // ← Change this later
 
 /* ─── Types ───────────────────────────────────────────────────────────────── */
 interface Language {
